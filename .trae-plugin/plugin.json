@@ -1,0 +1,51 @@
+{
+  "name": "site-manual-generator",
+  "version": "0.1.0",
+  "displayName": "网站操作手册生成器",
+  "displayNameEn": "Site Manual Generator",
+  "description": "输入网站名称或网址，自动爬取分析并生成 DOCX 格式的结构化操作手册。支持交互式调整、多 LLM 提供商、MCP 协议。",
+  "descriptionEn": "Automatically crawl any website and generate structured operation manuals in DOCX format. Supports interactive customization, multiple LLM providers, and MCP protocol.",
+  "author": {
+    "name": "Community"
+  },
+  "license": "MIT",
+  "keywords": [
+    "操作手册",
+    "使用指南",
+    "用户手册",
+    "文档生成",
+    "网站爬虫",
+    "manual",
+    "user-guide",
+    "documentation",
+    "crawler",
+    "docx"
+  ],
+  "skills": "./skills/",
+  "mcpServers": {
+    "site-manual-generator": {
+      "command": "python",
+      "args": ["-m", "site_manual_generator.mcp.server"]
+    }
+  },
+  "interface": {
+    "displayName": "网站操作手册生成器",
+    "shortDescription": "输入网址，一键生成 DOCX 操作手册",
+    "longDescription": "A powerful tool that automatically crawls any website, analyzes its features using AI, and generates a well-structured operation manual in DOCX format. Supports interactive customization, multiple LLM providers (OpenAI, DeepSeek, Qwen, Ollama, etc.), and MCP protocol for integration with Cursor, Claude Desktop, and more.",
+    "developerName": "Community",
+    "category": "生产力工具",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write",
+      "Web"
+    ],
+    "defaultPrompt": [
+      "Use site-manual-generator to generate an operation manual for this website."
+    ],
+    "brandColor": "#3B82F6",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}
